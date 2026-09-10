@@ -12,10 +12,10 @@ bash scripts/deploy-jclic.sh setup
 
 Esto crea:
 
-- `/home/samgua/sites/jclic.edutictac.es/releases`
-- `/home/samgua/sites/jclic.edutictac.es/current` (se crea al primer deploy)
-- snippet Nginx en `/home/samgua/sites/jclic.edutictac.es/nginx/jclic_static.conf`
-- helper remoto con sudo en `/home/samgua/sites/jclic.edutictac.es/nginx/install-nginx-snippet.sh`
+- `/srv/sites/jclic.edutictac.es/releases`
+- `/srv/sites/jclic.edutictac.es/current` (se crea al primer deploy)
+- snippet Nginx en `/srv/sites/jclic.edutictac.es/nginx/jclic_static.conf`
+- helper remoto con sudo en `/srv/sites/jclic.edutictac.es/nginx/install-nginx-snippet.sh`
 
 ## 2) Instalar configuración Nginx
 
@@ -75,5 +75,5 @@ bash scripts/deploy-jclic.sh all
 Puedes sobrescribir parámetros sin editar el script:
 
 ```bash
-REMOTE_HOST=samgua@edutictac.es REMOTE_PORT=2222 DOMAIN=jclic.edutictac.es bash scripts/deploy-jclic.sh deploy
+REMOTE_HOST=user@example.org REMOTE_PORT=22 DOMAIN=jclic.edutictac.es bash scripts/deploy-jclic.sh deploy
 ```

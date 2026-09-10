@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-REMOTE_HOST="${REMOTE_HOST:-samgua@edutictac.es}"
-REMOTE_PORT="${REMOTE_PORT:-2222}"
+REMOTE_HOST="${REMOTE_HOST:-user@example.org}"
+REMOTE_PORT="${REMOTE_PORT:-22}"
 DOMAIN="${DOMAIN:-jclic.edutictac.es}"
 LOCAL_DIR="${LOCAL_DIR:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
-REMOTE_BASE="${REMOTE_BASE:-/home/samgua/sites/${DOMAIN}}"
+REMOTE_BASE="${REMOTE_BASE:-/srv/sites/${DOMAIN}}"
 REMOTE_RELEASES="${REMOTE_BASE}/releases"
 REMOTE_CURRENT="${REMOTE_BASE}/current"
 NGINX_SNIPPET_NAME="jclic_static.conf"
@@ -20,11 +20,11 @@ Uso:
   scripts/deploy-jclic.sh all
 
 Variables opcionales:
-  REMOTE_HOST=samgua@edutictac.es
-  REMOTE_PORT=2222
+  REMOTE_HOST=user@example.org
+  REMOTE_PORT=22
   DOMAIN=jclic.edutictac.es
   LOCAL_DIR=/ruta/local/del/proyecto
-  REMOTE_BASE=/home/samgua/sites/jclic.edutictac.es
+  REMOTE_BASE=/srv/sites/jclic.edutictac.es
 EOF
 }
 
