@@ -281,7 +281,10 @@ const messages = {
     creditsSubtitle: 'Comunidad EduTicTac. Un poco de historia.',
     creditsP1: 'La biblioteca Ratoli la crearon maestros del colegio Jaime Balmes en el ano 2003 en un grupo de trabajo para el CEFIRE de Elx coordinado por Alvaro Baixauli.',
     creditsP2: 'La biblioteca se ha ido actualizando gracias principalmente al trabajo de Alvaro, Samuel y otros miembros de la Comunidad Edutictac que suelen hacer correcciones y propuestas de mejora.',
-    creditsP3: 'Esperamos que nuestro trabajo os sea de provecho. Si quieres hacer alguna sugerencia te esperamos en el foro de la Comunidad.'
+    creditsP3: 'Esperamos que nuestro trabajo os sea de provecho. Si quieres hacer alguna sugerencia te esperamos en el foro de la Comunidad.',
+    footerHome: 'Inicio',
+    footerPrivacy: 'Privacidad',
+    footerSource: 'Código fuente'
   },
   va: {
     htmlLang: 'ca',
@@ -314,7 +317,10 @@ const messages = {
     creditsSubtitle: 'Comunitat EduTicTac. Un poquet d\'historia.',
     creditsP1: 'La biblioteca Ratoli la van crear mestres del col.legi Jaime Balmes l\'any 2003 en grup de treball per al CEFIRE d\'Elx coordinat per Alvaro Baixauli.',
     creditsP2: 'La biblioteca ha anat actualitzant-se gracies principalment al treball d\'Alvaro, Samuel i altres membres de la Comunitat Edutictac que sovint fan rectificacions i propostes de millora.',
-    creditsP3: 'Esperem que la nostra faena vos siga de profit. Si vols fer cap suggerencia t\'esperem en el forum de la Comunitat.'
+    creditsP3: 'Esperem que la nostra faena vos siga de profit. Si vols fer cap suggerencia t\'esperem en el forum de la Comunitat.',
+    footerHome: 'Inici',
+    footerPrivacy: 'Privacitat',
+    footerSource: 'Codi font'
   }
 };
 function detectLocale() {
@@ -792,6 +798,12 @@ function applyInterfaceLanguage() {
   search.placeholder = text.searchPlaceholder;
   libraryBack.textContent = text.back;
   empty.textContent = text.empty;
+  const footerHome = document.getElementById('footerHome');
+  if (footerHome) footerHome.textContent = text.footerHome;
+  const footerPrivacy = document.getElementById('footerPrivacy');
+  if (footerPrivacy) footerPrivacy.textContent = text.footerPrivacy;
+  const footerSource = document.getElementById('footerSource');
+  if (footerSource) footerSource.textContent = text.footerSource;
 
   if (creditsTriggerTitle) creditsTriggerTitle.textContent = text.creditsTitle;
   if (creditsClose) creditsClose.setAttribute('aria-label', text.closeCredits);

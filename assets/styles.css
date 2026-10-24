@@ -203,3 +203,6 @@ main { max-width: 1180px; width: 100%; margin: 0 auto; padding: 18px 16px 32px; 
 @media (max-width: 780px) { .header-inner, .controls { grid-template-columns: 1fr; } .count { text-align: left; } h1 { font-size: 20px; } .activity-row { grid-template-columns: 1fr; } .tree-children { padding-left: 12px; } }
 @media (max-width: 780px) { .credits-sheet { padding: 22px; } .credits-hero { grid-template-columns: 1fr; } .credits-title { font-size: 24px; } }
 @media (max-width: 780px) { .section-mode .tree-section > summary { min-height: 134px; } .section-mode .tree-section .section-icon { width: 52px; height: 52px; } .section-mode .tree-section > summary span { font-size: 17px; } }
+
+main { display: flex; flex-direction: column; }
+main > .ett-footer { margin-top: auto; }
